@@ -1,0 +1,5 @@
+body { font-family: ui-monospace, monospace; max-width: 640px; margin: 32px auto; background: #0b0f0c; color: #d7f5d7; padding: 0 16px; }
+label { display: block; margin: 8px 0; }
+input { width: 140px; margin-left: 8px; background: #111; color: #d7f5d7; border: 1px solid #2a4; padding: 6px; }
+pre { background: #102; padding: 16px; white-space: pre-wrap; border: 1px solid #2a4; }
+.lede { color: #8c8; }
