@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'" />
   <title>Open Ledger</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>Open Ledger</h1>
-  <p class="lede">Paycheck split. Not advice. Not a broker.</p>
-  <form id="f">
-    <label>Biweekly net ($) <input id="check" type="number" value="1400" min="0" /></label>
-    <label>Monthly rent <input id="rent" type="number" value="1250" min="0" /></label>
-    <label>Monthly food <input id="food" type="number" value="325" min="0" /></label>
-    <label>Monthly car (ins + gas) <input id="car" type="number" value="300" min="0" /></label>
-    <label>Monthly phone <input id="phone" type="number" value="50" min="0" /></label>
-    <label>Save each check <input id="save" type="number" value="800" min="0" /></label>
+  <p class="lede">Paycheck split. Not advice. Not a broker. No server.</p>
+  <form id="f" action="#" method="get">
+    <label>Biweekly net ($) <input id="check" type="number" value="1400" min="0" max="100000" step="1" /></label>
+    <label>Monthly rent <input id="rent" type="number" value="1250" min="0" max="20000" step="1" /></label>
+    <label>Monthly food <input id="food" type="number" value="325" min="0" max="10000" step="1" /></label>
+    <label>Monthly car (ins + gas) <input id="car" type="number" value="300" min="0" max="10000" step="1" /></label>
+    <label>Monthly phone <input id="phone" type="number" value="50" min="0" max="1000" step="1" /></label>
+    <label>Save each check <input id="save" type="number" value="800" min="0" max="100000" step="1" /></label>
   </form>
   <pre id="out"></pre>
   <script src="app.js"></script>
